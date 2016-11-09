@@ -1,0 +1,9 @@
+<iframe src="frame.html" id="frame"></iframe>
+<script>
+  function f() {
+    window.history.pushState({}, "", "index.html");
+    document.getElementById("frame").contentWindow.f();
+    window.location = "go-back.html"
+  }
+</script>
+<input type="button" value="click" onclick="f()"></input>
